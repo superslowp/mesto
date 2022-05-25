@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 615px) {
-    .footer {
+    .footer__text {
         font-weight: 400;
         font-size: 14px;
         line-height: 17px;

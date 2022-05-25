@@ -21,9 +21,6 @@ function closePopup() {
     popupWindow.classList.remove('popup_opened');
 }
 
-editButton.addEventListener('click', openPopup);
-closeButton.addEventListener('click', closePopup);
-
 function updateProfile(evt) {
     evt.preventDefault();  
     profileName.textContent = nameField.value;
@@ -31,4 +28,6 @@ function updateProfile(evt) {
     closePopup();
 }
 
+editButton.addEventListener('click', openPopup);
+closeButton.addEventListener('click', closePopup);
 formElement.addEventListener('submit', updateProfile);
