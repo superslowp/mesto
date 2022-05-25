@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <img class="header__logo" src="./images/logo.png" alt="логотип mesto">
+    </header>
+    <main class="main">
+      <section class="profile">
+        <div class="profile__wrapper">
+          <img class="profile__avatar" src="./images/avatar.jpg" alt="аватар">
+          <div class="profile__info">
+            <div class="profile__name-wrapper">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button class="profile__edit-button"></button>
+            </div>
+            <p class="profile__occupation">Исследователь океана</p>
+          </div>
+        </div>
+        <button class="profile__add-button"></button>
+      </section>
+      <section class="elements">
+        <div class="element">
+          <img class="element__photo" src="./images/karachaevsk.jpg" alt="Карачаевск">
+          <div class="element__title-wrapper">
+            <h2 class="element__title">Карачаевск</h2>
+            <button class="element__like-button"></button>
+          </div>          
+        </div>
+        <div class="element">
+          <img class="element__photo" src="./images/elbrus.jpg" alt="Карачаевск">
+          <div class="element__title-wrapper">
+            <h2 class="element__title">Гора Эльбрус</h2>
+            <button class="element__like-button"></button>
+          </div>          
+        </div>
+        <div class="element">
+          <img class="element__photo" src="./images/dombay.jpg" alt="Карачаевск">
+          <div class="element__title-wrapper">
+            <h2 class="element__title">Домбай</h2>
+            <button class="element__like-button"></button>
+          </div>        
+        </div>
+        <div class="element">
+          <img class="element__photo" src="./images/kamchatka.jpg" alt="Карачаевск">
+          <div class="element__title-wrapper">
+            <h2 class="element__title">Гора Эльбрус</h2>
+            <button class="element__like-button"></button>
+          </div>          
+        </div>
+        <div class="element">
+          <img class="element__photo" src="./images/baikal.jpg" alt="Карачаевск">
+          <div class="element__title-wrapper">
+            <h2 class="element__title">Домбай</h2>
+            <button class="element__like-button"></button>
+          </div>          
+        </div>
+        <div class="element">
+          <img class="element__photo" src="./images/place-altai.jpg" alt="Карачаевск">
+          <div class="element__title-wrapper">
+            <h2 class="element__title">Карачаево-Черкессия</h2>
+            <button class="element__like-button"></button>
+          </div>          
+        </div>
+      </section>      
+    </main>
+    <footer class="footer">
+      <p class="footer__text">&copy; 2022 Mesto Russia</p>
+    </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <button type="button" class="popup__close-button"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+          <form name="profile">
+          <fieldset class="popup__form">
+            <input type="text" class="popup__input popup__input_type_name" placeholder="Имя" name="name">
+            <input type="text" class="popup__input popup__input_type_occupation" placeholder="О себе" name="occupation">
+            <button type="submit" class="popup__submit-button">Сохранить</button>
+          </fieldset>          
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/script.js"></script>
+</body>
+</html>
