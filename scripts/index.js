@@ -54,7 +54,13 @@ function createCard(cardTitle, cardLink) {
   const trashButton = newCard.querySelector(".element__trash-button");
 
   cardImg.src = cardLink;
-  cardImg.alt = cardTitle;
+  if (cardTitle === "") {
+    cardImg.alt = "неизвестная фотография";
+  }
+  else {
+    cardImg.alt = cardTitle;
+  }
+
   newCard.querySelector(".element__title").textContent = cardTitle;
 
   newCard.querySelector(".element__link").addEventListener('click', () => openCard(cardTitle, cardLink));
