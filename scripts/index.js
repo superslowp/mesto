@@ -121,8 +121,8 @@ function openEditProfilePopup() {
 
 function updateProfile(evt) {
   evt.preventDefault();
-  profileEditNameField.textContent = profileEditNameField.value;
-  profileEditOccupationField.textContent = profileEditOccupationField.value;
+  profileName.textContent = profileEditNameField.value;
+  profileOccupation.textContent = profileEditOccupationField.value;
   closePopup(popupProfileEdit);
 }
 
