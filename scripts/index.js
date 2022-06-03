@@ -47,7 +47,7 @@ function deleteCard (evt) {
   currentCard.remove();
 }
 
-function addCard(cardTitle, cardLink) {
+function createCard(cardTitle, cardLink) {
   const newCard = cardTemplate.cloneNode(true);
   const cardImg = newCard.querySelector(".element__photo");
   const likeButton = newCard.querySelector(".element__like-button");
@@ -65,9 +65,9 @@ function addCard(cardTitle, cardLink) {
   cardsSection.prepend(newCard);
 }
 
-function submitCard(evt) {
+function addCard(evt) {
   evt.preventDefault();
-  addCard(addCardTitleField.value, addCardLinkField.value);
+  createCard(addCardTitleField.value, addCardLinkField.value);
   addCardTitleField.value = "";
   addCardLinkField.value = "";
   closePopup(popupAddCard);
@@ -103,7 +103,7 @@ function initElements() {
   initialCards.reverse();
 
   initialCards.forEach(card => {
-    addCard(card.name, card.link);
+    createCard(card.name, card.link);
   });
 }
 
@@ -124,7 +124,7 @@ editButton.addEventListener('click', openEditProfilePopup);
 addCardButton.addEventListener('click', () => openPopup(popupAddCard));
 
 formProfileEdit.addEventListener('submit', updateProfile);
-formAddCard.addEventListener('submit', submitCard);
+formAddCard.addEventListener('submit', addCard);
 
 //назначим всем кнопкам закрытия попапов функцию
 const popupList = document.querySelectorAll(".popup");

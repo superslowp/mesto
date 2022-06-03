@@ -8,6 +8,7 @@
     height: 50px;
     padding: 0;
     cursor: pointer;
+    transition: opacity 0.3s ease-in;
 }
 
 .popup__submit-button:hover {

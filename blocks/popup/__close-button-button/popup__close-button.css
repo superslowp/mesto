@@ -12,6 +12,7 @@
     background-color: transparent;
     background-size: cover;
     cursor: pointer;
+    transition: opacity 0.3s ease-in;
 }
 
 .popup__close-button:hover {
