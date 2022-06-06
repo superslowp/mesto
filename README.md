@@ -1,12 +1,7 @@
 # Проект: Место
 
-### Обзор
+### Ссылка на GitHub Pages 
 
-* Ссылка на GitHub Pages
-* Figma
-
-
-** Ссылка на GitHub Pages **
 https://superslowp.github.io/mesto/
 
 **Figma**
