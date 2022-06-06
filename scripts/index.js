@@ -43,8 +43,12 @@ function openCard(cardTitle, cardLink) {
 }
 
 function deleteCard (evt) {
-  let currentCard = evt.target.closest('.element');
+  const currentCard = evt.target.closest('.element');
   currentCard.remove();
+}
+
+function renderCard (Card) {
+  cardsSection.prepend(Card);
 }
 
 function createCard(cardTitle, cardLink) {
@@ -67,8 +71,7 @@ function createCard(cardTitle, cardLink) {
 
   likeButton.addEventListener('click', setLike);
   trashButton.addEventListener('click', deleteCard);
-
-  cardsSection.prepend(newCard);
+  renderCard(newCard);
 }
 
 function addCard(evt) {
@@ -80,32 +83,7 @@ function addCard(evt) {
 }
 
 function initElements() {
-  const initialCards = [
-    {
-      name: 'Архыз',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-      name: 'Челябинская область',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-      name: 'Иваново',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-      name: 'Камчатка',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-      name: 'Холмогорский район',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-      name: 'Байкал',
-      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    }
-  ];
+  //initialCards - массив для первоначального заполнения на странице, объявлен в файле initialCards.js
   initialCards.reverse();
 
   initialCards.forEach(card => {
@@ -135,7 +113,7 @@ formAddCard.addEventListener('submit', addCard);
 //назначим всем кнопкам закрытия попапов функцию
 const popupList = document.querySelectorAll(".popup");
 for (i = 0; i < popupList.length; i++) {
-  let popup = popupList[i];
+  const popup = popupList[i];
   popup.querySelector(".popup__close-button").addEventListener('click', () => closePopup(popup));
 }
 
