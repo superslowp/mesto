@@ -47,11 +47,11 @@ function deleteCard (evt) {
   currentCard.remove();
 }
 
-function renderCard (Card) {
-  cardsSection.prepend(Card);
+function renderCard (card) {  
+  cardsSection.prepend(card);
 }
 
-function createCard(cardTitle, cardLink) {
+function createCard(cardTitle, cardLink) {  
   const newCard = cardTemplate.cloneNode(true);
   const cardImg = newCard.querySelector(".element__photo");
   const likeButton = newCard.querySelector(".element__like-button");
@@ -70,16 +70,18 @@ function createCard(cardTitle, cardLink) {
   newCard.querySelector(".element__link").addEventListener('click', () => openCard(cardTitle, cardLink));
 
   likeButton.addEventListener('click', setLike);
-  trashButton.addEventListener('click', deleteCard);
-  renderCard(newCard);
+  trashButton.addEventListener('click', deleteCard);  
+
+  return newCard;
 }
 
 function addCard(evt) {
   evt.preventDefault();
-  createCard(addCardTitleField.value, addCardLinkField.value);
+  newCard = createCard(addCardTitleField.value, addCardLinkField.value);
+  renderCard(newCard);
   addCardTitleField.value = "";
   addCardLinkField.value = "";
-  closePopup(popupAddCard);
+  closePopup(popupAddCard);    
 }
 
 function initElements() {
@@ -87,7 +89,8 @@ function initElements() {
   initialCards.reverse();
 
   initialCards.forEach(card => {
-    createCard(card.name, card.link);
+    newCard = createCard(card.name, card.link);
+    renderCard(newCard);
   });
 }
 
