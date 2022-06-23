@@ -62,16 +62,6 @@ function setEventListeners(formElement, selectors) {
 function enableValidation(selectors) {
     const formList = Array.from(document.querySelectorAll(selectors.formSelector));
     formList.forEach((formElement) => {
-        formElement.addEventListener("submit", function (evt) {
-            evt.preventDefault();
-            if (formElement.attributes.name.value === selectors.cardSubmitFormName) {
-                addCard();
-            }
-            else if (formElement.attributes.name.value === selectors.editProfileFormName) {
-                updateProfile();
-            };
-        });
-
         setEventListeners(formElement, selectors);
     });
 };
