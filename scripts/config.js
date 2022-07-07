@@ -1,4 +1,25 @@
-const initialCards = [
+export const cardConfig = {
+  cardTemplateSelector: ".cardTemplate",
+  cardTitleSelector: ".element__title",
+  cardPhotoSelector: ".element__photo",
+  cardLinkSelector: ".element__link",
+  cardTrashSelector: ".element__trash-button",
+  cardLikeButtonSelector: ".element__like-button",
+  cardLikeActiveSelector: "element__like-button_active"
+};
+
+export const validatorConfig = {
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__submit-button",
+  inactiveButtonClass: "popup__submit-button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+  cardSubmitFormName: "card-submit",
+  editProfileFormName: "profile"
+};
+
+export const initialCards = [
     {
       name: 'Архыз',
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
