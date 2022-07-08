@@ -5,7 +5,8 @@ export const cardConfig = {
   cardLinkSelector: ".element__link",
   cardTrashSelector: ".element__trash-button",
   cardLikeButtonSelector: ".element__like-button",
-  cardLikeActiveSelector: "element__like-button_active"
+  cardLikeActiveSelector: "element__like-button_active",
+  cardElementSelector: ".element"
 };
 
 export const validatorConfig = {
